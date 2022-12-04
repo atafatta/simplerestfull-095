@@ -55,8 +55,9 @@ public class ProductServiceController {
    public ResponseEntity<Object> createProduct(@RequestBody Product product) {
        if (productRepo.containsKey(product.getId())){
            return new ResponseEntity<>("Product key can't duplicate", HttpStatus.OK);
+       }else{
+           productRepo.put(product.getId(), product);
+           return new ResponseEntity<>("Product is created successfully", HttpStatus.CREATED);
        }
-      productRepo.put(product.getId(), product);
-      return new ResponseEntity<>("Product is created successfully", HttpStatus.CREATED);
    }
 }
