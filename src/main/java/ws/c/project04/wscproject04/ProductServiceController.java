@@ -25,12 +25,16 @@ public class ProductServiceController {
    static {
       Product honey = new Product();
       honey.setId("1");
-      honey.setName("TEH");
+      honey.setName("TEH TARIK");
+      honey.setHarga("5000");
+      honey.setJumlah("1");
       productRepo.put(honey.getId(), honey);
       
       Product almond = new Product();
       almond.setId("2");
-      almond.setName("TARIK");
+      almond.setName("ES KEPAL");
+      almond.setHarga("21000");
+      almond.setJumlah("3");
       productRepo.put(almond.getId(), almond);
    }
    @RequestMapping(value = "/products")

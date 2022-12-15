@@ -11,6 +11,8 @@ package ws.c.project04.wscproject04.products;
 public class Product {
     private String id;
     private String name;
+    private String harga;
+    private String jumlah;
 
     public String getId() {
         return id;
@@ -27,4 +29,20 @@ public class Product {
     public void setName(String name) {
         this.name = name;
     }
+    
+    public String  getHarga(){
+       return harga;
+   }
+   
+   public void setHarga(String harga) {
+      this.harga = harga;
+   }
+   
+   public String getJumlah(){
+       return jumlah;
+   }
+   
+   public void setJumlah(String Jumlah) {
+      this.jumlah = Jumlah;
+   }
 }
